@@ -1,38 +1,85 @@
+body {
+  overflow: hidden;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+svg {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
+
+#screen {
+  fill: rgb(165, 165, 165);
+}
+
+div,
+p,span {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  color: #fff;
+  background: #00adb5;
+  border: #333;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.button-close {
+  margin: 2px;
+}
+
+.button-pay {
+  margin: 2px;
+  background: #000;
+}
+
+/*
+  Loading 
+*/
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+ /**
+ * ----------------------------------------
+ * animation loader
+ * ----------------------------------------
+ */
+ @keyframes lds-dual-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
